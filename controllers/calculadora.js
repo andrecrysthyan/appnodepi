@@ -6,102 +6,137 @@ module.exports = function() {
 				var resposta   = {
 					resultado: 0.0
 				};
-				
+
 				resultado = accounting.formatNumber(resultado, 2, ".", ",");
 				resposta.resultado = resultado;
-				
+
 				return resposta;
 			},
-			
-			calculos: {
-				calcular: function(parametros) {
-					var numero1 = parseFloat(parametros.numero1);
-					var numero2 = parseFloat(parametros.numero2);
 
-					var resultado = Controller.utils.calculos[parametros.operacao](numero1, numero2);
-					
+			calculos: {
+				calcular: function(parametro) {
+					var quantidade = parseFloat(parametro.quantidade);
+
+					var resultado = Controller.utils.calculos[parametro.operacao](quantidade);
+
 					return resultado;
 				},
 
-				somar: function(numero1, numero2) {
-					var numero3 = 0;
+                precoFox: function(quantidade) {
+                    return 50190.00 / quantidade;
+                },
 
-					if (numero1 >= numero2) {
+                precoGolf: function(quantidade) {
+                    return 71000.00 / quantidade;
+                },
 
-						while (numero2 != 0) {
-							numero3 = numero1 % numero2;
-							numero1 = numero2;
-							numero2 = numero3;
-						}
-						return numero1;
-					}
-				},
-				
-				subtrair: function(numero1, numero2) {
-					return numero1 - numero2;
-				},
-				
-				multiplicar: function(numero1, numero2) {
-					return numero1 * numero2;
-				},
-				
-				dividir: function(numero1, numero2) {
-					return numero1 / numero2;
-				}
+                precoGol: function(quantidade) {
+                    return 30990.00 / quantidade;
+                },
+
+                precoVoyage: function(quantidade) {
+                    return 40120.00 / quantidade;
+                },
+
+                precoSaveiro: function(quantidade) {
+                    return 47630.00 / quantidade;
+                },
+
+                precoC3: function(quantidade) {
+                    return 44490.00 / quantidade;
+                },
+
+                precoC4: function(quantidade) {
+                    return 51290.00 / quantidade;
+                },
+
+                precoAirCross: function(quantidade) {
+                    return 58990.00 / quantidade;
+                },
+
+                precoDS5: function(quantidade) {
+                    return 139990.00 / quantidade;
+                },
+
+                precoDS3: function(quantidade) {
+                    return 86990.00 / quantidade;
+                },
 			},
-			
+
 			validaParametro: function(parametro) {
 				if(parametro && parametro !== '') {
 					return parseFloat(parametro);
 				}
-				
+
 				return 0.0;
 			},
-			
-			extrairParametros: function(body) {
-				var parametros = {
-					numero1: 0.0,
-					numero2: 0.0,
+
+			extrairParametro: function(body) {
+				var parametro = {
+                    quantidade: 0.0,
 					operacao: body.operacao
 				};
-				
-				parametros.numero1 = Controller.utils.validaParametro(body.numero1);
-				parametros.numero2 = Controller.utils.validaParametro(body.numero2);
-				
-				return parametros;
-			}
+
+				parametro.quantidade = Controller.utils.validaParametro(body.quantidade);
+
+				return parametro;
+			},
 		},
-		
+
 		get: {
 			index: function(request, response) {
 				response.render('index');
 			},
-			
-			somar: function(request, response) {
-				response.render('somar');
+
+            precoFox: function(request, response) {
+				response.render('precoFox');
 			},
-			
-			subtrair: function(request, response) {
-				response.render('subtrair');
-			},
-			
-			multiplicar: function(request, response) {
-				response.render('multiplicar');
-			},
-			
-			dividir: function(request, response) {
-				response.render('dividir');
-			}
+
+            precoGolf: function(request, response) {
+                response.render('precoGolf');
+            },
+
+            precoGol: function(request, response) {
+                response.render('precoGol');
+            },
+
+            precoVoyage: function(request, response) {
+                response.render('precoVoyage');
+            },
+
+            precoSaveiro: function(request, response) {
+                response.render('precoSaveiro');
+            },
+
+            precoC3: function(request, response) {
+                response.render('precoC3');
+            },
+
+            precoC4: function(request, response) {
+                response.render('precoC4');
+            },
+
+            precoAirCross: function(request, response) {
+                response.render('precoAircross');
+            },
+
+            precoDS5: function(request, response) {
+                response.render('precoDS5');
+            },
+
+            precoDS3: function(request, response) {
+                response.render('precoDS3');
+            },
 		},
-		
+
 		post: {
 			calcular: function(request, response) {
-				var parametros = Controller.utils.extrairParametros(request.body);
-				var resultado  = Controller.utils.calculos.calcular(parametros);
-				var resposta   = Controller.utils.formatarResposta(resultado);
-				
-				response.render(parametros.operacao, resposta);
-			}
+				var parametro = Controller.utils.extrairParametro(request.body);
+				var resultado  = Controller.utils.calculos.calcular(parametro);
+                var resposta   = Controller.utils.formatarResposta(resultado);
+
+				response.render(parametro.operacao, resposta);
+			},
 		}
 	};
 	

@@ -1,12 +1,10 @@
 <form action="/calcular" method="post">
 	<input type="hidden" name="operacao" value="<%- operacao %>" />
-	<label>Número 1</label>
-	<input type="text" name="numero1" />
-	<label>Número 2</label>
-	<input type="text" name="numero2" />
+	<label> Quantidade de Parcelas </label>
+	<input type="text" name="quantidade" />
 	<input type="submit" value="Calcular" />
 </form>
 
 <% if(typeof(resultado) != 'undefined') { %>
-	<p>O resultado é <%= resultado %>.</p>
+	<p>Valor de cada parcela: <%= resultado %>.</p>
 <% } %>
