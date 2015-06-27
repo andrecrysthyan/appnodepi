@@ -1,26 +1,24 @@
 var controller = require('../controllers/calculadora.js')();
 
 describe('Calculadora', function() {
-	describe('Testa se as operações-núcleo funcionam corretamente.', function() {
+	describe('Testa se as operações funcionam.', function() {
 		describe('Somar', function() {
-			it('Deveria retornar 5 quando for passado 1 e 4.', function() {
-				var numero1 = 1;
-				var numero2 = 4;
+			it('Fox: deve retornar 1003,80 quando for passado o numero de 50 parcelas', function() {
+				var quantidade = 50;
 				
-				var resultado = controller.utils.calculos.somar(numero1, numero2);
+				var resultado = controller.utils.calculos.precoFox(quantidade)
 				
 				resultado.should.be.a.Number;
-				resultado.should.be.equal(5);
+				resultado.should.be.equal(1003.80);
 			});
 			
-			it('Deveria retornar -3 quando for passado 1 e -4.', function() {
-				var numero1 = 1;
-				var numero2 = -4;
+			it('Fox: deve retornar 772,50 quando for passado o numero de 40 parcelas', function() {
+				var quantidade = 40;
 				
-				var resultado = controller.utils.calculos.somar(numero1, numero2);
+				var resultado = controller.utils.calculos.somar(quantidade);
 				
 				resultado.should.be.a.Number;
-				resultado.should.be.equal(-3);
+				resultado.should.be.equal(772.50);
 			});
 			
 			it('Deveria retornar 3 quando for passado -1 e 4.', function() {
