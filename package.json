@@ -7,10 +7,6 @@
     "type": "git",
     "url": "https://github.com/danielfs/node-api.git"
   },
-  "author": "Daniel Fernandes Silva",
-  "bugs": {
-    "url": "https://github.com/danielfs/node-api/issues"
-  },
   "scripts": {
     "start": "node server.js",
     "test": "./node_modules/mocha/bin/mocha"
@@ -28,8 +24,7 @@
   },
   "devDependencies": {
     "mocha": "^2.2.5",
-    "should": "^6.0.3",
-    "istanbul": "~0.2.4",
-    "coveralls": "~2.7.1"
-  }
+    "should": "^6.0.3"
+  },
+  "author": "Jonathan Ribeiro"
 }
