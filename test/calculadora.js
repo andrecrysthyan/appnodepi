@@ -1,7 +1,7 @@
 var controller = require('../controllers/calculadora.js')();
 
-	describe('\nTesta se as operações funcionam', function() {
-		describe('precoFox', function() {
+	describe('\nTesta se os métodos principais funcionam', function() {
+		describe('precoFox()', function() {
 			it('Deve retornar 1003.80 quando for passado o numero de 50 parcelas', function() {
 				var quantidade = 50;
 				
@@ -21,7 +21,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 		
-		describe('precoGolf', function() {
+		describe('precoGolf()', function() {
 			it('Deve retornar 710.00 quando for passado o numero de 100 parcelas', function() {
 				var quantidade = 100;
 				
@@ -41,7 +41,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 		
-		describe('precoGol', function() {
+		describe('precoGol()', function() {
 			it('Deve retornar 774.75 quando for passado o numero de 40 parcelas', function() {
 				var quantidade = 40;
 				
@@ -61,7 +61,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 		
-		describe('precoVoyage', function() {
+		describe('precoVoyage()', function() {
 			it('Deve retornar 1003.00 quando for passado o numero de 40 parcelas', function() {
 				var quantidade = 40;
 
@@ -81,7 +81,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoSaveiro', function() {
+		describe('precoSaveiro()', function() {
 			it('Deve retornar 1905.20 quando for passado o numero de 25 parcelas', function() {
 				var quantidade = 25;
 
@@ -101,7 +101,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoC3', function() {
+		describe('precoC3()', function() {
 			it('Deve retornar 2224.50 quando for passado o numero de 20 parcelas', function() {
 				var quantidade = 20;
 
@@ -121,7 +121,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoC4', function() {
+		describe('precoC4()', function() {
 			it('Deve retornar 1282.25 quando for passado o numero de 40 parcelas', function() {
 				var quantidade = 40;
 
@@ -141,7 +141,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoAirCross', function() {
+		describe('precoAirCross()', function() {
 			it('Deve retornar 5899.00 quando for passado o numero de 10 parcelas', function() {
 				var quantidade = 10;
 
@@ -161,7 +161,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoDS5', function() {
+		describe('precoDS5()', function() {
 			it('Deve retornar 1399.90 quando for passado o numero de 100 parcelas', function() {
 				var quantidade = 100;
 
@@ -181,7 +181,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoDS3', function() {
+		describe('precoDS3()', function() {
 			it('Deve retornar 2174.75 quando for passado o numero de 40 parcelas', function() {
 				var quantidade = 40;
 
@@ -200,11 +200,171 @@ var controller = require('../controllers/calculadora.js')();
 				resultado.should.be.equal(3479.60);
 			});
 		});
+
+		describe('precoHB20()', function() {
+			it('Deve retornar 699.80 quando for passado o numero de 50 parcelas', function() {
+				var quantidade = 50;
+
+				var resultado = controller.utils.calculos.precoHB20(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(699.80);
+			});
+
+			it('Deve retornar 1749.50 quando for passado o numero de 20 parcelas', function() {
+				var quantidade = 20;
+
+				var resultado = controller.utils.calculos.precoHB20(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1749.50);
+			});
+		});
+
+		describe('precoTucson()', function() {
+			it('Deve retornar 1000.00 quando for passado o numero de 65 parcelas', function() {
+				var quantidade = 65;
+
+				var resultado = controller.utils.calculos.precoTucson(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1000.00);
+			});
+
+			it('Deve retornar 1625.00 quando for passado o numero de 40 parcelas', function() {
+				var quantidade = 40;
+
+				var resultado = controller.utils.calculos.precoTucson(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1625.00);
+			});
+		});
+
+		describe('precoIX35()', function() {
+			it('Deve retornar 4850.00 quando for passado o numero de 20 parcelas', function() {
+				var quantidade = 20;
+
+				var resultado = controller.utils.calculos.precoIX35(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(4850.00);
+			});
+
+			it('Deve retornar 970.00 quando for passado o numero de 100 parcelas', function() {
+				var quantidade = 100;
+
+				var resultado = controller.utils.calculos.precoIX35(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(970.00);
+			});
+		});
+
+		describe('precoSantaFe()', function() {
+			it('Deve retornar 1600.00 quando for passado o numero de 90 parcelas', function() {
+				var quantidade = 90;
+
+				var resultado = controller.utils.calculos.precoSantaFe(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1600.00);
+			});
+
+			it('Deve retornar 3600.00 quando for passado o numero de 40 parcelas', function() {
+				var quantidade = 40;
+
+				var resultado = controller.utils.calculos.precoSantaFe(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(3600.00);
+			});
+		});
+
+		describe('precoAzera()', function() {
+			it('Deve retornar 5600.00 quando for passado o numero de 20 parcelas', function() {
+				var quantidade = 20;
+
+				var resultado = controller.utils.calculos.precoAzera(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(5600.00);
+			});
+
+			it('Deve retornar 1120.00 quando for passado o numero de 100 parcelas', function() {
+				var quantidade = 100;
+
+				var resultado = controller.utils.calculos.precoAzera(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1120.00);
+			});
+		});
+
+		describe('precoFrontier()', function() {
+			it('Deve retornar 4599.50 quando for passado o numero de 20 parcelas', function() {
+				var quantidade = 20;
+
+				var resultado = controller.utils.calculos.precoFrontier(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(4599.50);
+			});
+
+			it('Deve retornar 1839.80 quando for passado o numero de 50 parcelas', function() {
+				var quantidade = 50;
+
+				var resultado = controller.utils.calculos.precoFrontier(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1839.80);
+			});
+		});
+
+		describe('precoSentra()', function() {
+			it('Deve retornar 1273.80 quando for passado o numero de 50 parcelas', function() {
+				var quantidade = 50;
+
+				var resultado = controller.utils.calculos.precoSentra(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1273.80);
+			});
+
+			it('Deve retornar 2547.60 quando for passado o numero de 25 parcelas', function() {
+				var quantidade = 25;
+
+				var resultado = controller.utils.calculos.precoSentra(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(2547.60);
+			});
+		});
+
+		describe('precoVersa()', function() {
+			it('Deve retornar 419.90 quando for passado o numero de 100 parcelas', function() {
+				var quantidade = 100;
+
+				var resultado = controller.utils.calculos.precoVersa(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(419.90);
+			});
+
+			it('Deve retornar 839.80 quando for passado o numero de 50 parcelas', function() {
+				var quantidade = 50;
+
+				var resultado = controller.utils.calculos.precoVersa(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(839.80);
+			});
+		});
 	});
 
 
 	describe('\nTesta se a função calcular() funciona', function() {
-		describe('precoFox', function() {
+		describe('precoFox()', function() {
 			it('Deveria retornar o valor de 2509.50 quando passar 20 parcelas', function() {
 				var parametros = {
 					quantidade: 20,
@@ -218,7 +378,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoGolf', function() {
+		describe('precoGolf()', function() {
 			it('Deveria retornar o valor de 1420.00 quando passar 50 parcelas', function() {
 				var parametros = {
 					quantidade: 50,
@@ -232,7 +392,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoGol', function() {
+		describe('precoGol()', function() {
 			it('Deveria retornar o valor de 3099.00 quando passar 10 parcelas', function() {
 				var parametros = {
 					quantidade: 10,
@@ -246,7 +406,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoVoyage', function() {
+		describe('precoVoyage()', function() {
 			it('Deveria retornar o valor de 2006.00 quando passar 20 parcelas', function() {
 				var parametros = {
 					quantidade: 20,
@@ -260,7 +420,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoSaveiro', function() {
+		describe('precoSaveiro()', function() {
 			it('Deveria retornar o valor de 952.60 quando passar 50 parcelas', function() {
 				var parametros = {
 					quantidade: 50,
@@ -274,7 +434,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoC3', function() {
+		describe('precoC3()', function() {
 			it('Deveria retornar o valor de 741.50 quando passar 60 parcelas', function() {
 				var parametros = {
 					quantidade: 60,
@@ -288,7 +448,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoC4', function() {
+		describe('precoC4()', function() {
 			it('Deveria retornar o valor de 1025.80 quando passar 50 parcelas', function() {
 				var parametros = {
 					quantidade: 50,
@@ -302,7 +462,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoAirCross', function() {
+		describe('precoAirCross()', function() {
 			it('Deveria retornar o valor de 589.90 quando passar 100 parcelas', function() {
 				var parametros = {
 					quantidade: 100,
@@ -316,7 +476,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoDS5', function() {
+		describe('precoDS5()', function() {
 			it('Deveria retornar o valor de 13999.00 quando passar 10 parcelas', function() {
 				var parametros = {
 					quantidade: 10,
@@ -330,7 +490,7 @@ var controller = require('../controllers/calculadora.js')();
 			});
 		});
 
-		describe('precoDS3', function() {
+		describe('precoDS3()', function() {
 			it('Deveria retornar o valor de 1739.80 quando passar 50 parcelas', function() {
 				var parametros = {
 					quantidade: 50,
@@ -341,6 +501,118 @@ var controller = require('../controllers/calculadora.js')();
 
 				resultado.should.be.a.Number;
 				resultado.should.be.equal(1739.80);
+			});
+		});
+
+		describe('precoHB20()', function() {
+			it('Deveria retornar o valor de 1399.60 quando passar 25 parcelas', function() {
+				var parametros = {
+					quantidade: 25,
+					operacao: 'precoHB20'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1399.60);
+			});
+		});
+
+		describe('precoTucson()', function() {
+			it('Deveria retornar o valor de 812.50 quando passar 80 parcelas', function() {
+				var parametros = {
+					quantidade: 80,
+					operacao: 'precoTucson'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(812.50);
+			});
+		});
+
+		describe('precoIX35()', function() {
+			it('Deveria retornar o valor de 1212.50 quando passar 80 parcelas', function() {
+				var parametros = {
+					quantidade: 80,
+					operacao: 'precoIX35'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1212.50);
+			});
+		});
+
+		describe('precoSantaFe()', function() {
+			it('Deveria retornar o valor de 1800.00 quando passar 80 parcelas', function() {
+				var parametros = {
+					quantidade: 80,
+					operacao: 'precoSantaFe'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1800.00);
+			});
+		});
+
+		describe('precoAzera()', function() {
+			it('Deveria retornar o valor de 1600.00 quando passar 70 parcelas', function() {
+				var parametros = {
+					quantidade: 70,
+					operacao: 'precoAzera'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(1600.00);
+			});
+		});
+
+		describe('precoFrontier()', function() {
+			it('Deveria retornar o valor de 919.90 quando passar 100 parcelas', function() {
+				var parametros = {
+					quantidade: 100,
+					operacao: 'precoFrontier'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(919.90);
+			});
+		});
+
+		describe('precoSentra()', function() {
+			it('Deveria retornar o valor de 849.20 quando passar 75 parcelas', function() {
+				var parametros = {
+					quantidade: 75,
+					operacao: 'precoSentra'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(849.20);
+			});
+		});
+
+		describe('precoVersa()', function() {
+			it('Deveria retornar o valor de 4199.00 quando passar 10 parcelas', function() {
+				var parametros = {
+					quantidade: 10,
+					operacao: 'precoVersa'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(4199.00);
 			});
 		});
 	});

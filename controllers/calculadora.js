@@ -61,6 +61,38 @@ module.exports = function() {
                 precoDS3: function(quantidade) {
                     return 86990.00 / quantidade;
                 },
+
+                precoHB20: function(quantidade) {
+                    return 34990.00 / quantidade;
+                },
+
+                precoTucson: function(quantidade) {
+                    return 65000.00 / quantidade;
+                },
+
+                precoIX35: function(quantidade) {
+                    return 97000.00 / quantidade;
+                },
+
+                precoSantaFe: function(quantidade) {
+                    return 144000.00 / quantidade;
+                },
+
+                precoAzera: function(quantidade) {
+                    return 112000.00 / quantidade;
+                },
+
+                precoFrontier: function(quantidade) {
+                    return 91990.00 / quantidade;
+                },
+
+                precoSentra: function(quantidade) {
+                    return 63690.00 / quantidade;
+                },
+
+                precoVersa: function(quantidade) {
+                    return 41990.00 / quantidade;
+                }
 			},
 
 			validaParametro: function(parametro) {
@@ -127,6 +159,38 @@ module.exports = function() {
             precoDS3: function(request, response) {
                 response.render('precoDS3');
             },
+
+            precoHB20: function(request, response) {
+                response.render('precoHB20');
+            },
+
+            precoTucson: function(request, response) {
+                response.render('precoTucson');
+            },
+
+            precoIX35: function(request, response) {
+                response.render('precoIX35');
+            },
+
+            precoSantaFe: function(request, response) {
+                response.render('precoSantaFe');
+            },
+
+            precoAzera: function(request, response) {
+                response.render('precoAzera');
+            },
+
+            precoFrontier: function(request, response) {
+                response.render('precoFrontier');
+            },
+
+            precoSentra: function(request, response) {
+                response.render('precoSentra');
+            },
+
+            precoVersa: function(request, response) {
+                response.render('precoVersa');
+            }
 		},
 
 		post: {
