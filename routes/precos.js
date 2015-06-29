@@ -1,5 +1,5 @@
 module.exports = function(app) {
-	var controller = app.controllers.calculadora;
+	var controller = app.controllers.precos;
 
 	app.get('/', controller.get.index);
 	app.get('/precoFox', controller.get.precoFox);
@@ -23,6 +23,9 @@ module.exports = function(app) {
     app.get('/precoFrontier', controller.get.precoFrontier);
     app.get('/precoSentra', controller.get.precoSentra);
     app.get('/precoVersa', controller.get.precoVersa);
+
+    app.get('/precoFerrari', controller.get.precoFerrari);
+    app.get('/precoLamborghini', controller.get.precoLamborghini);
 
 	app.post('/calcular', controller.post.calcular);
 };

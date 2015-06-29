@@ -1,10 +1,16 @@
+<link href="css/form.css" rel="stylesheet" type="text/css">
+
 <form action="/calcular" method="post">
 	<input type="hidden" name="operacao" value="<%- operacao %>" />
-	<label> Quantidade de Parcelas </label>
-	<input type="text" name="quantidade" />
-	<input type="submit" value="Calcular" />
+	<center>
+    <label>Quantidade de Parcelas  </label>
+	<input type="text" name="quantidade" size="5"/> <br><br>
+	<input type="submit" class = calc value="Calcular" />
+    </center>
 </form>
 
 <% if(typeof(resultado) != 'undefined') { %>
-	<p>Valor de cada parcela: <%= resultado %>.</p>
+	<p>Valor de cada parcela: R$ <%= resultado %>.</p>
 <% } %>
+
+<center><a href="/">Voltar</a></center>

@@ -1,4 +1,4 @@
-var controller = require('../controllers/calculadora.js')();
+var controller = require('../controllers/precos.js')();
 
 	describe('\nTesta se os métodos principais funcionam', function() {
 		describe('precoFox()', function() {
@@ -360,6 +360,46 @@ var controller = require('../controllers/calculadora.js')();
 				resultado.should.be.equal(839.80);
 			});
 		});
+
+		describe('precoFerrari()', function() {
+			it('Deve retornar 16500.00 quando for passado o numero de 100 parcelas', function() {
+				var quantidade = 100;
+
+				var resultado = controller.utils.calculos.precoFerrari(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(16500.00);
+			});
+
+			it('Deve retornar 41250.00 quando for passado o numero de 40 parcelas', function() {
+				var quantidade = 40;
+
+				var resultado = controller.utils.calculos.precoFerrari(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(41250.00);
+			});
+		});
+
+		describe('precoLamborghini()', function() {
+			it('Deve retornar 37375.00 quando for passado o numero de 80 parcelas', function() {
+				var quantidade = 80;
+
+				var resultado = controller.utils.calculos.precoLamborghini(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(37375.00);
+			});
+
+			it('Deve retornar 4600.00 quando for passado o numero de 650 parcelas', function() {
+				var quantidade = 650;
+
+				var resultado = controller.utils.calculos.precoLamborghini(quantidade);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(4600.00);
+			});
+		});
 	});
 
 
@@ -613,6 +653,34 @@ var controller = require('../controllers/calculadora.js')();
 
 				resultado.should.be.a.Number;
 				resultado.should.be.equal(4199.00);
+			});
+		});
+
+		describe('precoFerrari()', function() {
+			it('Deveria retornar o valor de 6600.00 quando passar 250 parcelas', function() {
+				var parametros = {
+					quantidade: 250,
+					operacao: 'precoFerrari'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(6600.00);
+			});
+		});
+
+		describe('precoLamborghini()', function() {
+			it('Deveria retornar o valor de 7475.00 quando passar 400 parcelas', function() {
+				var parametros = {
+					quantidade: 400,
+					operacao: 'precoLamborghini'
+				};
+
+				var resultado = controller.utils.calculos.calcular(parametros);
+
+				resultado.should.be.a.Number;
+				resultado.should.be.equal(7475.00);
 			});
 		});
 	});

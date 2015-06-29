@@ -92,6 +92,14 @@ module.exports = function() {
 
                 precoVersa: function(quantidade) {
                     return 41990.00 / quantidade;
+                },
+
+                precoFerrari: function(quantidade) {
+                    return 1650000.00 / quantidade;
+                },
+
+                precoLamborghini: function(quantidade) {
+                    return 2990000.00 / quantidade;
                 }
 			},
 
@@ -190,12 +198,20 @@ module.exports = function() {
 
             precoVersa: function(request, response) {
                 response.render('precoVersa');
+            },
+
+            precoFerrari: function(request, response) {
+                response.render('precoFerrari');
+            },
+
+            precoLamborghini: function(request, response) {
+                response.render('precoLamborghini');
             }
 		},
 
 		post: {
 			calcular: function(request, response) {
-				var parametro = Controller.utils.extrairParametro(request.body);
+                var parametro = Controller.utils.extrairParametro(request.body);
 				var resultado  = Controller.utils.calculos.calcular(parametro);
                 var resposta   = Controller.utils.formatarResposta(resultado);
 
