@@ -26,4 +26,22 @@ describe('Protractor', function() {
 
         expect(browser.driver.findElement(by.id('result')).getText()).toEqual('Valor de cada parcela: R$ 627,38.');
     });
+
+    it('Deve retornar 999.71 quando se passar o valor de 35 parcelas', function() {
+        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoHB20');
+        browser.driver.findElement(by.id('quantidade')).sendKeys(35);
+
+        browser.driver.findElement(by.id('botao')).click();
+
+        expect(browser.driver.findElement(by.id('result')).getText()).toEqual('Valor de cada parcela: R$ 999,71.');
+    });
+
+    it('Deve retornar 909.86 quando se passar o valor de 70 parcelas', function() {
+        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoSentra');
+        browser.driver.findElement(by.id('quantidade')).sendKeys(70);
+
+        browser.driver.findElement(by.id('botao')).click();
+
+        expect(browser.driver.findElement(by.id('result')).getText()).toEqual('Valor de cada parcela: R$ 909,86.');
+    });
 });
