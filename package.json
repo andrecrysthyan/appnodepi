@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "mocha": "^2.2.5",
+    "protractor": "^2.1.0",
     "should": "^6.0.3"
   },
   "author": "Jonathan Ribeiro <12027158>",
