@@ -5,22 +5,23 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielfs/node-api.git"
+    "url": "https://github.com/jonathanro/appnodepi.git"
   },
   "scripts": {
     "start": "node server.js",
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "istanbul test _mocha"
   },
   "engines": {
     "node": "0.12.2"
   },
-  "homepage": "https://github.com/danielfs/node-api",
+  "homepage": "https://github.com/jonathanro/appnodepi",
   "dependencies": {
     "accounting": "^0.4.1",
     "body-parser": "^1.12.4",
     "ejs": "^2.3.1",
     "express": "^4.12.4",
-    "express-load": "^1.1.14"
+    "express-load": "^1.1.14",
+    "istanbul": "^0.3.17"
   },
   "devDependencies": {
     "mocha": "^2.2.5",

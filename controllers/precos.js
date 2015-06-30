@@ -100,6 +100,186 @@ module.exports = function() {
 
                 precoLamborghini: function(quantidade) {
                     return 2990000.00 / quantidade;
+                },
+
+                somar10: function(numero) {
+                    var valor = Number(numero);
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+
+                    return valor;
+                },
+
+                diminuir10: function(numero) {
+                    var valor = Number(numero);
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+
+                    return valor;
+                },
+
+                somar15: function(numero) {
+                    var valor = Number(numero);
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+
+                    return valor;
+                },
+
+                diminuir15: function(numero) {
+                    var valor = Number(numero);
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+
+                    return valor;
+                },
+
+                somar20: function(numero) {
+                    var valor = Number(numero);
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+
+                    return valor;
+                },
+
+                diminuir20: function(numero) {
+                    var valor = Number(numero);
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+
+                    return valor;
+                },
+
+                somar25: function(numero) {
+                    var valor = Number(numero);
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+                    valor += 1;
+
+                    return valor;
+                },
+
+                diminuir25: function(numero) {
+                    var valor = Number(numero);
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+                    valor -= 1;
+
+                    return valor;
                 }
 			},
 

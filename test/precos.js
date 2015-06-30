@@ -402,6 +402,80 @@ var controller = require('../controllers/precos.js')();
 		});
 	});
 
+	describe('\nTesta métodos restantes', function() {
+		it('Deve retornar 10 quando for passado o numero 1', function() {
+			var numero = 1;
+
+			var resultado = controller.utils.calculos.somar10(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(10);
+		});
+
+		it('Deve retornar 1 quando for passado o numero 10', function() {
+			var numero = 10;
+
+			var resultado = controller.utils.calculos.diminuir10(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(1);
+		});
+
+		it('Deve retornar 15 quando for passado o numero 1', function() {
+			var numero = 1;
+
+			var resultado = controller.utils.calculos.somar15(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(15);
+		});
+
+		it('Deve retornar 1 quando for passado o numero 15', function() {
+			var numero = 15;
+
+			var resultado = controller.utils.calculos.diminuir15(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(1);
+		});
+
+		it('Deve retornar 20 quando for passado o numero 1', function() {
+			var numero = 1;
+
+			var resultado = controller.utils.calculos.somar20(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(20);
+		});
+
+		it('Deve retornar 1 quando for passado o numero 20', function() {
+			var numero = 20;
+
+			var resultado = controller.utils.calculos.diminuir20(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(1);
+		});
+
+		it('Deve retornar 25 quando for passado o numero 1', function() {
+			var numero = 1;
+
+			var resultado = controller.utils.calculos.somar25(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(25);
+		});
+
+		it('Deve retornar 1 quando for passado o numero 25', function() {
+			var numero = 25;
+
+			var resultado = controller.utils.calculos.diminuir25(numero);
+
+			resultado.should.be.a.Number;
+			resultado.should.be.equal(1);
+		});
+
+	});
 
 	describe('\nTesta se a função calcular() funciona', function() {
 		describe('precoFox()', function() {
