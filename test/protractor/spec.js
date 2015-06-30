@@ -1,16 +1,11 @@
 describe('Protractor', function() {
-
-
-    describe('Protractor Demo App', function() {
         it('should add one and two', function() {
-            browser.get('http://juliemr.github.io/protractor-demo/');
-            element(by.model('first')).sendKeys(1);
-            element(by.model('second')).sendKeys(2);
+            browser.get('https://morning-castle-6615.herokuapp.com/precoLamborghini');
+            element(by.model('dado')).sendKeys(50);
 
-            element(by.id('gobutton')).click();
+            element(by.id('botao')).click();
 
-            expect(element(by.binding('latest')).getText()).
-                toEqual('3'); // This is wrong!
+            expect(element(by.binding('resultado')).getText()).
+                toEqual('59800.00');
         });
-    });
 });
