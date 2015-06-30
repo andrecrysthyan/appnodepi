@@ -1,7 +1,7 @@
 {
-  "name": "node-app",
+  "name": "parcela-carros",
   "version": "1.0.0",
-  "description": "Aplicação de teste",
+  "description": "Aplicação para o PI do 7° Período de SI",
   "main": "server.js",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "istanbul test _mocha"
+    "test": "istanbul cover --hook-run-in-context node_modules/mocha/bin/_mocha -- -R spec"
   },
   "engines": {
     "node": "0.12.2"
@@ -27,5 +27,6 @@
     "mocha": "^2.2.5",
     "should": "^6.0.3"
   },
-  "author": "Jonathan Ribeiro"
+  "author": "Jonathan Ribeiro <12027158>",
+  "license": "MIT"
 }
