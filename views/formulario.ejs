@@ -4,8 +4,8 @@
 	<input type="hidden" name="operacao" value="<%- operacao %>" />
 	<center>
     <label>Quantidade de Parcelas  </label>
-	<input type="text" name="quantidade" ng-model="dado" size="5"/> <br><br>
-	<input type="submit" class = calc value="Calcular" id="botao" />
+		<input ng-model="dado" id = "quantidade" name="quantidade" type="text" class="input-small ng-valid ng-touched ng-dirty" size="5">
+		<button ng-click="doAddition()" id="botao" class="calc">Calcular</button>
     </center>
 </form>
 
