@@ -1,7 +1,7 @@
 describe('Protractor', function() {
 
     it('Deve retornar 59800.00 quando se passar o valor de 50 parcelas', function() {
-        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoLamborghini');
+        browser.driver.get('http://localhost:3000/precoLamborghini');
         browser.driver.findElement(by.id('quantidade')).sendKeys(50);
 
         browser.driver.findElement(by.id('botao')).click();
@@ -10,7 +10,7 @@ describe('Protractor', function() {
     });
 
     it('Deve retornar 55000.00 quando se passar o valor de 30 parcelas', function() {
-        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoFerrari');
+        browser.driver.get('http://localhost:3000/precoFerrari');
         browser.driver.findElement(by.id('quantidade')).sendKeys(30);
 
         browser.driver.findElement(by.id('botao')).click();
@@ -19,7 +19,7 @@ describe('Protractor', function() {
     });
 
     it('Deve retornar 627.38 quando se passar o valor de 80 parcelas', function() {
-        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoFox');
+        browser.driver.get('http://localhost:3000/precoFox');
         browser.driver.findElement(by.id('quantidade')).sendKeys(80);
 
         browser.driver.findElement(by.id('botao')).click();
@@ -28,7 +28,7 @@ describe('Protractor', function() {
     });
 
     it('Deve retornar 999.71 quando se passar o valor de 35 parcelas', function() {
-        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoHB20');
+        browser.driver.get('http://localhost:3000/precoHB20');
         browser.driver.findElement(by.id('quantidade')).sendKeys(35);
 
         browser.driver.findElement(by.id('botao')).click();
@@ -37,7 +37,7 @@ describe('Protractor', function() {
     });
 
     it('Deve retornar 909.86 quando se passar o valor de 70 parcelas', function() {
-        browser.driver.get('https://morning-castle-6615.herokuapp.com/precoSentra');
+        browser.driver.get('http://localhost:3000/precoSentra');
         browser.driver.findElement(by.id('quantidade')).sendKeys(70);
 
         browser.driver.findElement(by.id('botao')).click();
